@@ -43,10 +43,12 @@ def parse_file(f, points, transform, screen, color):
                 
             elif cmd == 'scale':
                 s = make_scale(args[0], args[1], args[2])
-                matrix_mult(s, transform[-1])
+                matrix_mult(transform[-1], s)
+                transform[-1] = s
             elif cmd == 'translate':
                 t = make_translate(args[0], args[1], args[2])
-                matrix_mult(t, transform[-1])
+                matrix_mult(transform[-1], t)
+                transform[-1] = t
             else:
                 angle = args[0] * (math.pi / 180)
                 if cmd == 'xrotate':
@@ -55,7 +57,8 @@ def parse_file(f, points, transform, screen, color):
                     r = make_rotY(angle)
                 elif cmd == 'zrotate':
                     r = make_rotZ(angle)
-                matrix_mult(r, transform[-1])
+                matrix_mult(transform[-1], r)
+                transform[-1] = r
                 
         # elif cmd == 'ident':
             # ident(transform)

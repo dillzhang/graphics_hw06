@@ -10,8 +10,6 @@ edges = []
 temp = new_matrix()
 ident(temp)
 transform = [temp]
-
-print transform[-1]
 if len(sys.argv) == 2:
     f = open(sys.argv[1])
 
