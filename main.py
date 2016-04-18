@@ -7,8 +7,11 @@ import sys
 screen = new_screen()
 color = [ 0, 255, 0 ]
 edges = []
-transform = new_matrix()
+temp = new_matrix()
+ident(temp)
+transform = [temp]
 
+print transform[-1]
 if len(sys.argv) == 2:
     f = open(sys.argv[1])
 
