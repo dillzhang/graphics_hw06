@@ -1,30 +1,52 @@
-#reset torus, rotate to make it look cool
-yrotate
-30
 push
 translate
 250 250 0
+xrotate
+-30
+yrotate
+30
 box
--50 100 -25 100 200 50
+-100 20 75 200 40 150
 push
 translate
-0 126 0
-sphere
-0 0 25
+-100 -20 75
+xrotate
+90
+torus
+0 0 10 20
 pop
 push
 translate
-50 75 0
+100 -20 -75
 xrotate
--30
-box
-0 25 -25 50 100 50
+90
+torus
+0 0 10 20
 pop
+push
 translate
--50 75 0
+-100 -20 -75
 xrotate
--30
-box
--50 25 -25 50 100 50
+90
+torus
+0 0 10 20
+pop
+push
+translate
+100 -20 75
+xrotate
+90
+torus
+0 0 10 20
+pop
+#push
+#translate
+#100 20 0
+#zrotate
+#60
+#box
+#0 10 -15 100 20 30
 display
+save
+pic.png
 quit
